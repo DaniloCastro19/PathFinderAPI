@@ -1,0 +1,664 @@
+{
+	"info": {
+		"_postman_id": "d8b7caca-b922-45cb-b353-880ad7cf25fa",
+		"name": "PCapstone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34150840"
+	},
+	"item": [
+		{
+			"name": "/user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Lola\", \r\n    \"email\": \"lola@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/users",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/map",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Map 1\",\r\n    \"dimensions\": {\r\n        \"width\":5,\r\n        \"height\":5\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/maps",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"maps"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/route",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"start\": {\r\n        \"x\": 1,\r\n        \"y\": 1\r\n    },\r\n    \"end\":{\r\n        \"x\": 5,\r\n        \"y\": 5\r\n    },\r\n    \"map_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/routes",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"routes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/obstacle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"position\":{\r\n        \"x\": 3,\r\n        \"y\": 3\r\n    },\r\n    \"route_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/obstacles",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"obstacles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/waypoint",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Moms house\",\r\n    \"position\":{\r\n        \"x\": 3,\r\n        \"y\": 2\r\n    },\r\n    \"route_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/waypoints",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"waypoints"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/optimalPath",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"route_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/optimal_path",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"optimal_path"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/users/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/map",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/maps/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"maps",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/route",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/routes/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"routes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/obstacle",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/obstacles/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"obstacles",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/waypoint",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/waypoints/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"waypoints",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/optimal_path",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/optimal_path/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"optimal_path",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/requests",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/stats/requests",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"stats",
+						"requests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/response_time",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/stats/response-time",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"stats",
+						"response-time"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/status_codes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/stats/status-codes",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"stats",
+						"status-codes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/popular_endpoints",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/stats/popular-endpoints",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"stats",
+						"popular-endpoints"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Juancho\",\r\n    \"email\": \"Jdaniel2004@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/users/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/map",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Map of mine\",\r\n    \"dimensions\":{\r\n        \"width\": 25,\r\n        \"height\":20\r\n    }\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/maps/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"maps",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/obstacle",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"position\":{\r\n        \"x\": 5,\r\n        \"y\": 1\r\n    },\r\n    \"route_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/obstacles/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"obstacles",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/waypoint",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Node A\",\r\n    \"position\":{\r\n        \"x\": 1,\r\n        \"y\": 5\r\n    },\r\n    \"route_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/waypoints/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"waypoints",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/optimal_path",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/optimal_path/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"optimal_path",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/obstacle",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/obstacles/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"obstacles",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/waypoint",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/waypoints/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"waypoints",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/route",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/routes/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"routes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/map",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/maps/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"maps",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "localhost:5000/api"
+		}
+	]
+}
